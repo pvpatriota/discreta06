@@ -14,5 +14,8 @@ int alfabeto(int a, int b);
 
 int main(void)
 {
+    float artificio[2]; /* Para calular ponto medio entre dois status do automato */
+    int entrada[EMAX][3],cor[3],parametro[6],alfa;
+    /* 0= origem, 1= letra, 2= destino */
     return 0;
 }
