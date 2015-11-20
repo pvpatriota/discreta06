@@ -49,15 +49,21 @@ int main(void)
     int n,eixoX[parametro[0]],eixoY[parametro[0]],tamanho = 50;
 
     FILE *arq= fopen("automato1.txt","r");
-    fscanf(automato1,"%d", &parametro[0]); //quantidade
-    fscanf(automato1,"%d", &parametro[1]); //alfabeto
-    fscanf(automato1,"%d", &parametro[2]); //começo
-    fscanf(automato1,"%d %d %d", &parametro[3], &parametro[4], &parametro[5]);//fim
+    fscanf(arq,"%d", &parametro[0]); //quantidade
+    fscanf(arq,"%d", &parametro[1]); //alfabeto
+    fscanf(arq,"%d", &parametro[2]); //começo
+    fscanf(arq,"%d %d %d", &parametro[3], &parametro[4], &parametro[5]);//fim
     for(n=0;n<EMAX;n++)
     {
-        fscanf(automato1,"%d %d %d", &entrada[n][0],&entrada[n][1],&entrada[n][2]);
+        fscanf(arq,"%d %d %d", &entrada[n][0],&entrada[n][1],&entrada[n][2]);
     }
 
+    allegro_init();
+    install_keyboard();
+    set_color_depth(32);
+    set_gfx_mode(GFX_AUTODETECT_WINDOWED,XMAX,YMAX,0,0);
+    PALETTE pal;
+    BITMAP *img = create_bitmap(XMAX,YMAX);
 
     return 0;
 
@@ -75,5 +81,5 @@ int main(void)
                 else
                     x++;
             }
-
+    }
     }
