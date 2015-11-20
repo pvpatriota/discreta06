@@ -47,4 +47,20 @@ int main(void)
     entrada[5][2] =1;
 
     return 0;
-}
+
+    int alfabeto(int a, int b)
+    {
+        int x=0;
+
+        if( b>a || b==69)// se o alfabeto desejado não estiver no meu intervalo ou for igual a 'E'
+            return 0;
+        else
+            while(x!=-1)
+            {
+                if( b == x )
+                    return (b+97);
+                else
+                    x++;
+            }
+
+    }
