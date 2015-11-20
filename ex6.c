@@ -77,22 +77,30 @@ int main(void)
                 textprintf_ex(img, font, eixoX[n], eixoY[n]+10, makecol(0,0,255),-1,"q%d",n);
             }
         }
-
-        return 0;
-
-        int alfabeto(int a, int b)
-        {
-            int x=0;
-
-            if( b>a || b==69)// se o alfabeto desejado não estiver no meu intervalo ou for igual a 'E'
-                return 0;
-            else
-                while(x!=-1)
-                {
-                    if( b == x )
-                        return (b+97);
-                    else
-                        x++;
-                }
-        }
+        else
+            if(((n==parametro[3] || n==parametro[4]) || n==parametro[5]))
+            {
+                circlefill(img, eixoX[n]/*eixox*/, eixoY[n]/*eixoy*/, TAMANHO/*tamanho*/, makecol(255,255,0));
+                circle(img, eixoX[n]/*eixox*/, eixoY[n]/*eixoy*/, TAMANHO-7/*tamanho*/, makecol(0,0,0));
+                textprintf_ex(img, font, eixoX[n], eixoY[n]+10, makecol(0,0,255),-1,"q%d",n);                                        
+            }
     }
+
+    return 0;
+
+    int alfabeto(int a, int b)
+    {
+        int x=0;
+
+        if( b>a || b==69)// se o alfabeto desejado não estiver no meu intervalo ou for igual a 'E'
+            return 0;
+        else
+            while(x!=-1)
+            {
+                if( b == x )
+                    return (b+97);
+                else
+                    x++;
+            }
+    }
+}
