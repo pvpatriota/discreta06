@@ -102,26 +102,34 @@ int main(void)
         if(entrada[n][0] == entrada[n][2])//destino == saida
         {
             int points[8]={eixoX[entrada[n][0]],eixoY[entrada[n][0]],eixoX[entrada[n][0]]-60,eixoY[entrada[n][0]]+120,points[4]= eixoX[entrada[n][0]]+60,\
-                                             points[5]= eixoY[entrada[n][0]]+120,points[6]= eixoX[entrada[n][0]]+30,points[7]= eixoY[entrada[n][0]]};
+                points[5]= eixoY[entrada[n][0]]+120,points[6]= eixoX[entrada[n][0]]+30,points[7]= eixoY[entrada[n][0]]};
+
+            spline(img,points,makecol(0,254,0));
+            eixoX[entrada[n][2]] += 30;
+            triangle(img,eixoX[entrada[n][2]]-5,eixoY[entrada[n][2]],\
+                    eixoX[entrada[n][2]]+5,eixoY[entrada[n][2]],\
+                    eixoX[entrada[n][2]],eixoY[entrada[n][2]]+10,makecol(14,5,170));
         }
+
     }
+}
 
 
+return 0;
+
+int alfabeto(int a, int b)
+{
+    int x=0;
+
+    if( b>a || b==69)// se o alfabeto desejado não estiver no meu intervalo ou for igual a 'E'
         return 0;
-
-        int alfabeto(int a, int b)
+    else
+        while(x!=-1)
         {
-            int x=0;
-
-            if( b>a || b==69)// se o alfabeto desejado não estiver no meu intervalo ou for igual a 'E'
-                return 0;
+            if( b == x )
+                return (b+97);
             else
-                while(x!=-1)
-                {
-                    if( b == x )
-                        return (b+97);
-                    else
-                        x++;
-                }
+                x++;
         }
-    }
+}
+}
