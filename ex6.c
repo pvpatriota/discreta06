@@ -46,6 +46,8 @@ int main(void)
     entrada[5][1] =0;
     entrada[5][2] =1;
 
+    int n,eixoX[parametro[0]],eixoY[parametro[0]],tamanho = 50;
+
     FILE *arq= fopen("automato1.txt","r");
     fscanf(automato1,"%d", &parametro[0]); //quantidade
     fscanf(automato1,"%d", &parametro[1]); //alfabeto
