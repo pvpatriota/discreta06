@@ -69,7 +69,14 @@ int main(void)
     {                            
         eixoX[n] = EIXOX(n);
         eixoY[n] = EIXOY(n);
-    }
+        if(n==parametro[2])
+        {
+            if((n!= parametro[3] && n!= parametro[4]) && n!= parametro[5])
+            {
+                circlefill(img, eixoX[n]/*eixox*/, eixoY[n]/*eixoy*/, TAMANHO/*tamanho*/, makecol(255,255,0));
+                textprintf_ex(img, font, eixoX[n], eixoY[n]+10, makecol(0,0,255),-1,"q%d",n);
+            }
+        }
 
         return 0;
 
