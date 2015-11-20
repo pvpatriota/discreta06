@@ -65,21 +65,27 @@ int main(void)
     PALETTE pal;
     BITMAP *img = create_bitmap(XMAX,YMAX);
 
-    return 0;
-
-    int alfabeto(int a, int b)
-    {
-        int x=0;
-
-        if( b>a || b==69)// se o alfabeto desejado não estiver no meu intervalo ou for igual a 'E'
-            return 0;
-        else
-            while(x!=-1)
-            {
-                if( b == x )
-                    return (b+97);
-                else
-                    x++;
-            }
+    for(n=0;n<parametro[0];n++)
+    {                            
+        eixoX[n] = EIXOX(n);
+        eixoY[n] = EIXOY(n);
     }
+
+        return 0;
+
+        int alfabeto(int a, int b)
+        {
+            int x=0;
+
+            if( b>a || b==69)// se o alfabeto desejado não estiver no meu intervalo ou for igual a 'E'
+                return 0;
+            else
+                while(x!=-1)
+                {
+                    if( b == x )
+                        return (b+97);
+                    else
+                        x++;
+                }
+        }
     }
