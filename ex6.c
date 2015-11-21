@@ -50,7 +50,7 @@ int main(void)
     int n,eixoX[parametro[0]],eixoY[parametro[0]],tamanho = 50;
 
     FILE *arq= fopen("automato1.txt","r");
-'    fscanf(arq,"%d", &parametro[0]); //quantidade
+    fscanf(arq,"%d", &parametro[0]); //quantidade
     fscanf(arq,"%d", &parametro[1]); //alfabeto
     fscanf(arq,"%d", &parametro[2]); //começo
     fscanf(arq,"%d %d %d", &parametro[3], &parametro[4], &parametro[5]);//fim
@@ -80,9 +80,11 @@ int main(void)
             else
                 if(((n==parametro[3] || n==parametro[4]) || n==parametro[5]))
                 {
-                    circlefill(img, eixoX[n]/*eixox*/, eixoY[n]/*eixoy*/, TAMANHO/*tamanho*/, makecol(255,255,0));
-                    circle(img, eixoX[n]/*eixox*/, eixoY[n]/*eixoy*/, TAMANHO-7/*tamanho*/, makecol(0,0,0));
-                    textprintf_ex(img, font, eixoX[n], eixoY[n]+10, makecol(0,0,255),-1,"q%d",n);                                        
+                      circlefill(img, eixoX[n]/*eixox*/, eixoY[n]/*eixoy*/, TAMANHO/*tamanho*/, makecol(255,255,0));
+                      circle(img, eixoX[n]/*eixox*/, eixoY[n]/*eixoy*/, TAMANHO-7/*tamanho*/, makecol(0,0,0));
+                      textprintf_ex(img, font, eixoX[n], eixoY[n]+10, makecol(0,0,255),-1,"q%d",n);                    
+                      line(img, /*xin*/eixoX[n],/*yin*/eixoY[n]+60,/*xfin*/eixoX[n],/*yfin*/eixoY[n]+100, makecol(255,128,0));
+                      triangle(img,eixoX[n]+10,eixoY[n]+50,eixoX[n]-10,eixoY[n]+50,eixoX[n],eixoY[n]+30,makecol(14,5,170));   
                 }
         }
         else
