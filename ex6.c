@@ -160,7 +160,33 @@ int EIXOX(int N1)
     if(N1==11)
         return (int) (7*(XMAX-TAMANHO)/8);
 }
-
+int EIXOY(int N2)
+{
+    if ( N2 == 0 )
+        return (int)((YMAX-TAMANHO)/2);
+    if ( N2 == 1 )
+        return (YMAX-(2*TAMANHO));
+    if ( N2 == 2 )
+        return (int)((YMAX-TAMANHO)/2);
+    if ( N2 == 3 )
+        return (TAMANHO);               
+    if (N2 == 4)
+        return (int)((XMAX-TAMANHO)/4);
+    if (N2 == 5)
+        return (int)(3*(XMAX-TAMANHO)/4);
+    if (N2 == 6)
+        return (int)(3*(XMAX-TAMANHO)/4);
+    if (N2 == 7)
+        return (int)((XMAX-TAMANHO)/4);
+    if (N2 == 8)
+        return (int)((XMAX-TAMANHO)/8);
+    if (N2 == 9)
+        return (int)(7*(XMAX-TAMANHO)/8);
+    if (N2 == 10)
+        return (int)(7*(XMAX-TAMANHO)/8);
+    if (N2 == 11)
+        return (int)((XMAX-TAMANHO)/8);
+}
 
 return 0;
 
