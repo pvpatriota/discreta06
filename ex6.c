@@ -152,6 +152,23 @@ int main(void)
                     artificio[1]=eixoY[entrada[n][0]];
                 }
             }
+            else
+            {
+                artificio[0] =((float)(eixoX[entrada[n][0]]- eixoX[entrada[n][2]])/2);
+                artificio[1] =((float)(eixoY[entrada[n][0]]- eixoY[entrada[n][2]])/2);
+                if(artificio[0]<0)
+                {
+                    artificio[0]*=(-1);
+                }
+                if(artificio[1]<0)
+                {
+                    artificio[1]*=(-1);
+                }
+                artificio[0] += menor(eixoX[entrada[n][0]],eixoX[entrada[n][2]]);
+                artificio[1] += menor(eixoY[entrada[n][0]],eixoY[entrada[n][2]]);
+            }
+            textprintf_ex(img, font, (int)artificio[0]+2*n, (int)artificio[1]+2*n, makecol(0,255,255),-1,"%c",alfa);
+            line(img, /*xin*/eixoX[entrada[n][0]],/*yin*/eixoY[entrada[n][0]],/*xfin*/eixoX[entrada[n][2]]+25,/*yfin*/eixoY[entrada[n][2]], makecol(0,254,0));
 
         }
     }
@@ -216,6 +233,7 @@ int EIXOY(int N2)
     if (N2 == 10)
         return (int)(7*(XMAX-TAMANHO)/8);
     if (N2 == 11)
+        l
         return (int)((XMAX-TAMANHO)/8);
 }
 
