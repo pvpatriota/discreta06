@@ -11,6 +11,7 @@
 int EIXOX(int N1);
 int EIXOY(int N2);
 int alfabeto(int a, int b);
+int menor(int A, int B);
 
 int main(void)
 {
@@ -49,7 +50,7 @@ int main(void)
     int n,eixoX[parametro[0]],eixoY[parametro[0]],tamanho = 50;
 
     FILE *arq= fopen("automato1.txt","r");
-    fscanf(arq,"%d", &parametro[0]); //quantidade
+'    fscanf(arq,"%d", &parametro[0]); //quantidade
     fscanf(arq,"%d", &parametro[1]); //alfabeto
     fscanf(arq,"%d", &parametro[2]); //começo
     fscanf(arq,"%d %d %d", &parametro[3], &parametro[4], &parametro[5]);//fim
@@ -205,4 +206,11 @@ int alfabeto(int a, int b)
                 x++;
         }
 }
+
+int menor(int A,int B)
+{
+        if(A<B)
+               return A;
+        if(B<A)
+               return B;
 }
