@@ -58,6 +58,7 @@ int main(void)
     {
         fscanf(arq,"%d %d %d", &entrada[n][0],&entrada[n][1],&entrada[n][2]);
     }
+    fclose(arq);
 
     allegro_init();
     install_keyboard();
