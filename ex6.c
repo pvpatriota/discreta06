@@ -207,7 +207,6 @@ int EIXOY(int N2)
     if (N2 == 10)
         return (int)(7*(XMAX-TAMANHO)/8);
     if (N2 == 11)
-        l
         return (int)((XMAX-TAMANHO)/8);
 }
 
