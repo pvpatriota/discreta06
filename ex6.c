@@ -237,8 +237,6 @@ int EIXOY(int N2)
         return (int)((XMAX-TAMANHO)/8);
 }
 
-return 0;
-
 int alfabeto(int a, int b)
 {
     int x=0;
