@@ -119,15 +119,39 @@ int main(void)
         }
         else 
         {          
-            line(img, /*xin*/eixoX[entrada[n][0]],/*yin*/eixoY[entrada[n][0]],/*xfin*/eixoX[entrada[n][2]]+25,/*yfin*/eixoY[entrada[n][2]], makecol(0,254,0));
+            artificio[0] =((float)(eixoX[entrada[n][0]]- eixoX[entrada[n][2]])/2);
+            artificio[1] =((float)(eixoY[entrada[n][0]]- eixoY[entrada[n][2]])/2);
+            if(artificio[0]<0)
+                artificio[0]*= (-1);
+            if(artificio[1]<0)
+                artificio[1]*= (-1);
             triangle(img,eixoX[entrada[n][2]]+20,eixoY[entrada[n][2]],\
-                    eixoX[entrada[n][2]]+30,eixoY[entrada[n][2]],\ 
-                    eixoX[entrada[n][2]]+25,eixoY[entrada[n][2]]+10,makecol(14,5,170));
+            eixoX[entrada[n][2]]+30,eixoY[entrada[n][2]],\
+            eixoX[entrada[n][2]]+25,eixoY[entrada[n][2]]+10,makecol(14,5,170));
             alfa = alfabeto(parametro[1],entrada[n][1]);
-            artificio[0] =(float)(eixoX[entrada[n][0]]- eixoX[entrada[n][2]])/2;
-            artificio[1] =(float)(eixoY[entrada[n][0]]- eixoY[entrada[n][2]])/2;
-            textprintf_ex(img, font, eixoX[(int)artificio[0]], eixoY[(int)artificio[1]], makecol(0,255,255),-1,"%c",alfa);
-            textprintf_ex(img, font, eixoX[(int)(XMAX/2)], eixoY[(int)(YMAX/2)+n*10], makecol(0,255,255),-1,"atificio0 = %d artificio1 = %d",(int)artificio[0],(int)artificio[1]);
+            if( eixoX[entrada[n][0]]==eixoX[entrada[n][2]] || eixoY[entrada[n][0]] == eixoY[entrada[n][2]])
+            {
+                if( eixoX[entrada[n][0]]==eixoX[entrada[n][2]] && eixoY[entrada[n][0]] < eixoY[entrada[n][2]])
+                {
+                    artificio[1]+=eixoY[entrada[n][0]];
+                    artificio[0]=eixoX[entrada[n][0]];
+                }
+                if( eixoX[entrada[n][0]]==eixoX[entrada[n][2]] && eixoY[entrada[n][0]] > eixoY[entrada[n][2]])
+                {
+                    artificio[1]+=eixoY[entrada[n][2]];
+                    artificio[0]=eixoX[entrada[n][0]];
+                }
+                if( eixoX[entrada[n][0]]> eixoX[entrada[n][2]] && eixoY[entrada[n][0]] == eixoY[entrada[n][2]])
+                {
+                    artificio[0]+=eixoX[entrada[n][2]];
+                    artificio[1]=eixoY[entrada[n][0]];
+                }
+                if( eixoX[entrada[n][0]]< eixoX[entrada[n][2]] && eixoY[entrada[n][0]] == eixoY[entrada[n][2]])
+                {
+                    artificio[0]+=eixoX[entrada[n][0]];
+                    artificio[1]=eixoY[entrada[n][0]];
+                }
+            }
 
         }
     }
