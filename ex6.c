@@ -123,7 +123,43 @@ int main(void)
             textprintf_ex(img, font, eixoX[(int)(XMAX/2)], eixoY[(int)(YMAX/2)+n*10], makecol(0,255,255),-1,"atificio0 = %d artificio1 = %d",(int)artificio[0],(int)artificio[1]);
 
         }
-    }   
+    }
+    blit(img,screen,0,0,0,0,640,480); 
+
+    while(!key[KEY_ESC]) 
+    {}; 
+
+    return 0;
+}
+END_OF_MAIN()
+
+int EIXOX(int N1)
+{
+    if ( N1 == 0 )
+        return (TAMANHO);
+    if ( N1 == 1 )
+        return (int)(XMAX-TAMANHO)/2;
+    if ( N1 == 2 )
+        return (XMAX-(2*TAMANHO));
+    if ( N1 == 3 )
+        return (int)(XMAX-TAMANHO)/2;               
+    if (N1 == 4)
+        return (int) ((XMAX-TAMANHO)/4);
+    if (N1 == 5)
+        return (int) ((XMAX-TAMANHO)/4);
+    if (N1 == 6)
+        return (int) ((3*(XMAX-TAMANHO))/4);
+    if(N1 == 7)
+        return (int) ((3*(XMAX-TAMANHO))/4);
+    if(N1==8)
+        return (int) ((XMAX-TAMANHO)/8);
+    if(N1==9)
+        return (int) ((XMAX-TAMANHO)/8);
+    if(N1==10)
+        return (int) (7*(XMAX-TAMANHO)/8);
+    if(N1==11)
+        return (int) (7*(XMAX-TAMANHO)/8);
+}
 
 
 return 0;
