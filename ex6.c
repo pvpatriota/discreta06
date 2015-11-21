@@ -104,14 +104,18 @@ int main(void)
     {
         if(entrada[n][0] == entrada[n][2])//destino == saida
         {
-            int points[8]={eixoX[entrada[n][0]],eixoY[entrada[n][0]],eixoX[entrada[n][0]]-60,eixoY[entrada[n][0]]+120,points[4]= eixoX[entrada[n][0]]+60,\
+            int points[8]={points[0]=eixoX[entrada[n][0]],points[1]=eixoY[entrada[n][0]],\
+                points[2]=eixoX[entrada[n][0]]-60,points[3]=eixoY[entrada[n][0]]+120,points[4]= eixoX[entrada[n][0]]+60,\
                 points[5]= eixoY[entrada[n][0]]+120,points[6]= eixoX[entrada[n][0]]+30,points[7]= eixoY[entrada[n][0]]};
 
-            spline(img,points,makecol(0,254,0));
-            eixoX[entrada[n][2]] += 30;
-            triangle(img,eixoX[entrada[n][2]]-5,eixoY[entrada[n][2]],\
-                    eixoX[entrada[n][2]]+5,eixoY[entrada[n][2]],\
-                    eixoX[entrada[n][2]],eixoY[entrada[n][2]]+10,makecol(14,5,170));
+                spline(img,points,makecol(0,254,0));
+                alfa = alfabeto(parametro[1],entrada[n][1]);
+                textprintf_ex(img, font,eixoX[entrada[n][0]],eixoY[entrada[n][0]]+80, makecol(0,255,255),-1,"%c",alfa);
+                eixoX[entrada[n][2]] += 30;
+                triangle(img,eixoX[entrada[n][2]]-5,eixoY[entrada[n][2]],\
+                eixoX[entrada[n][2]]+5,eixoY[entrada[n][2]],\
+                eixoX[entrada[n][2]],eixoY[entrada[n][2]]+10,makecol(14,5,170));
+
         }
         else 
         {          
