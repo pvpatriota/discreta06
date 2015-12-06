@@ -1,32 +1,78 @@
 ex6.c: In function ‘main’:
-ex6.c:66:13: warning: unused variable ‘img’ [-Wunused-variable]
-     BITMAP *img = create_bitmap(XMAX,YMAX);
-             ^
-ex6.c:65:13: warning: unused variable ‘pal’ [-Wunused-variable]
+ex6.c:40:13: warning: unused variable ‘pal’ [-Wunused-variable]
      PALETTE pal;
              ^
-ex6.c:49:51: warning: unused variable ‘tamanho’ [-Wunused-variable]
+ex6.c:22:51: warning: unused variable ‘tamanho’ [-Wunused-variable]
      int n,eixoX[parametro[0]],eixoY[parametro[0]],tamanho = 50;
                                                    ^
-ex6.c:49:31: warning: unused variable ‘eixoY’ [-Wunused-variable]
-     int n,eixoX[parametro[0]],eixoY[parametro[0]],tamanho = 50;
-                               ^
-ex6.c:49:11: warning: unused variable ‘eixoX’ [-Wunused-variable]
-     int n,eixoX[parametro[0]],eixoY[parametro[0]],tamanho = 50;
-           ^
-ex6.c:18:46: warning: unused variable ‘alfa’ [-Wunused-variable]
-     int entrada[EMAX][3],cor[3],parametro[6],alfa;
-                                              ^
-ex6.c:18:26: warning: unused variable ‘cor’ [-Wunused-variable]
+ex6.c:19:26: warning: unused variable ‘cor’ [-Wunused-variable]
      int entrada[EMAX][3],cor[3],parametro[6],alfa;
                           ^
-ex6.c:17:11: warning: unused variable ‘artificio’ [-Wunused-variable]
-     float artificio[2]; /* Para calular ponto medio entre dois status do automato */
-           ^
-/tmp/ccXFPJrp.o: In function `main':
-/home/jppra/discreta/rascunhos/discreta06/ex6.c:61: undefined reference to `_install_allegro_version_check'
-/home/jppra/discreta/rascunhos/discreta06/ex6.c:62: undefined reference to `install_keyboard'
-/home/jppra/discreta/rascunhos/discreta06/ex6.c:63: undefined reference to `set_color_depth'
-/home/jppra/discreta/rascunhos/discreta06/ex6.c:64: undefined reference to `set_gfx_mode'
-/home/jppra/discreta/rascunhos/discreta06/ex6.c:66: undefined reference to `create_bitmap'
+ex6.c: In function ‘EIXOX’:
+ex6.c:184:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+ex6.c: In function ‘EIXOY’:
+ex6.c:211:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+ex6.c: In function ‘alfabeto’:
+ex6.c:227:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+ex6.c: In function ‘menor’:
+ex6.c:235:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+/tmp/ccmfLVdb.o: In function `main':
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:36: undefined reference to `_install_allegro_version_check'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:37: undefined reference to `install_keyboard'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:38: undefined reference to `set_color_depth'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:39: undefined reference to `set_gfx_mode'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:41: undefined reference to `create_bitmap'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:51: undefined reference to `makecol'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:51: undefined reference to `circlefill'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:52: undefined reference to `makecol'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:52: undefined reference to `font'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:52: undefined reference to `textprintf_ex'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:57: undefined reference to `makecol'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:57: undefined reference to `circlefill'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:58: undefined reference to `makecol'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:58: undefined reference to `circle'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:59: undefined reference to `makecol'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:59: undefined reference to `font'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:59: undefined reference to `textprintf_ex'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:60: undefined reference to `makecol'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:60: undefined reference to `line'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:61: undefined reference to `makecol'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:61: undefined reference to `triangle'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:67: undefined reference to `makecol'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:67: undefined reference to `circlefill'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:68: undefined reference to `makecol'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:68: undefined reference to `circle'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:69: undefined reference to `makecol'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:69: undefined reference to `font'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:69: undefined reference to `textprintf_ex'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:73: undefined reference to `makecol'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:73: undefined reference to `circlefill'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:74: undefined reference to `makecol'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:74: undefined reference to `font'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:74: undefined reference to `textprintf_ex'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:85: undefined reference to `makecol'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:85: undefined reference to `spline'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:87: undefined reference to `makecol'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:87: undefined reference to `font'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:87: undefined reference to `textprintf_ex'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:89: undefined reference to `makecol'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:89: undefined reference to `triangle'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:102: undefined reference to `makecol'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:102: undefined reference to `triangle'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:144: undefined reference to `makecol'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:144: undefined reference to `font'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:144: undefined reference to `textprintf_ex'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:145: undefined reference to `makecol'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:145: undefined reference to `line'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:149: undefined reference to `screen'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:149: undefined reference to `blit'
+/home/beco/Documents/fontes/upe-exercicios/discreta/2015-02/discreta06/ex6.c:151: undefined reference to `key'
 collect2: error: ld returned 1 exit status
